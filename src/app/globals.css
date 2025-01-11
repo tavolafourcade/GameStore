@@ -2,3 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --primary: ;
+    --secondary: ;
+    --text-primary: #3b3b3b;
+    --grey-background: #eeeeee;
+    --grey-subtext: #585660;
+    --grey-medium: #3b3b3b;
+    --grey-secondary: #8f8f8f;
+    --grey-neutral: #404040;
+    --grey-neutral-neutral: #737373;
+    --disabled: #c6c6c6;
+  }
+}
