@@ -9,7 +9,7 @@ export async function GET(request: Request) {
 
   let games = allGames;
 
-  if (genre) {
+  if (genre && genre.toLocaleLowerCase() !== "all") {
     games = games.filter(
       (game) => game.genre.toLowerCase() === genre.toLowerCase()
     );
