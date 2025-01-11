@@ -13,7 +13,7 @@ export const allGames: Game[] = [
   {
     id: "1",
     genre: "Action",
-    image: "/game-images/cyberpunk2077.jpeg",
+    image: "/assets/game-images/cyberpunk2077.jpeg",
     name: "Cyberpunk 2077",
     description: "An open-world, action-adventure story set in Night City.",
     price: 59.99,
@@ -22,7 +22,7 @@ export const allGames: Game[] = [
   {
     id: "2",
     genre: "RPG",
-    image: "/game-images/thewitcher3.jpeg",
+    image: "/assets/game-images/thewitcher3.jpeg",
     name: "The Witcher 3: Wild Hunt",
     description:
       "A story-driven, next-generation open world role-playing game.",
@@ -32,7 +32,7 @@ export const allGames: Game[] = [
   {
     id: "3",
     genre: "Adventure",
-    image: "/game-images/zeldabotw.jpeg",
+    image: "/assets/game-images/zeldabotw.jpeg",
     name: "The Legend of Zelda: Breath of the Wild",
     description:
       "An epic adventure that breaks boundaries in the Zelda series.",
@@ -42,7 +42,7 @@ export const allGames: Game[] = [
   {
     id: "4",
     genre: "Action",
-    image: "/game-images/gta5.jpeg",
+    image: "/assets/game-images/gta5.jpeg",
     name: "Grand Theft Auto V",
     description:
       "An action-adventure game set in the sprawling city of Los Santos.",
@@ -52,7 +52,7 @@ export const allGames: Game[] = [
   {
     id: "5",
     genre: "Shooter",
-    image: "/game-images/doometernal.jpeg",
+    image: "/assets/game-images/doometernal.jpeg",
     name: "DOOM Eternal",
     description: "A fast-paced, thrilling shooter where you battle demons.",
     price: 59.99,
@@ -61,7 +61,7 @@ export const allGames: Game[] = [
   {
     id: "6",
     genre: "Simulation",
-    image: "/game-images/thesims4.jpeg",
+    image: "/assets/game-images/thesims4.jpeg",
     name: "The Sims 4",
     description:
       "A life simulation game where you control the rich and entertaining moments of your Sims' lives.",
@@ -71,7 +71,7 @@ export const allGames: Game[] = [
   {
     id: "7",
     genre: "Action",
-    image: "/game-images/gofwar.jpeg",
+    image: "/assets/game-images/gofwar.jpeg",
     name: "Gear Of War",
     description:
       "Gears of War is an acclaimed third-person shooter video game focused on humanity's battle against the terrifying Locust Horde",
@@ -81,7 +81,7 @@ export const allGames: Game[] = [
   {
     id: "8",
     genre: "Racing",
-    image: "/game-images/forzahorizon4.jpeg",
+    image: "/assets/game-images/forzahorizon4.jpeg",
     name: "Forza Horizon 4",
     description:
       "An open world racing game set in a fictional representation of the United Kingdom.",
@@ -91,7 +91,7 @@ export const allGames: Game[] = [
   {
     id: "9",
     genre: "Sports",
-    image: "/game-images/fifa21.jpeg",
+    image: "/assets/game-images/fifa21.jpeg",
     name: "FIFA 21",
     description:
       "The latest installment in the world-renowned football simulation series.",
@@ -101,7 +101,7 @@ export const allGames: Game[] = [
   {
     id: "10",
     genre: "MMORPG",
-    image: "/game-images/worldofwarcraft.jpeg",
+    image: "/assets/game-images/worldofwarcraft.jpeg",
     name: "World of Warcraft",
     description:
       "A massively multiplayer online role-playing game set in the Warcraft universe.",
@@ -111,7 +111,7 @@ export const allGames: Game[] = [
   {
     id: "11",
     genre: "Puzzle",
-    image: "/game-images/portal2.jpeg",
+    image: "/assets/game-images/portal2.jpeg",
     name: "Portal 2",
     description:
       "A puzzle-platform game that challenges you with mind-bending puzzles.",
@@ -121,7 +121,7 @@ export const allGames: Game[] = [
   {
     id: "12",
     genre: "Horror",
-    image: "/game-images/residentevil2.jpeg",
+    image: "/assets/game-images/residentevil2.jpeg",
     name: "Resident Evil 2",
     description:
       "A survival horror game set in the aftermath of a deadly virus outbreak.",
@@ -131,7 +131,7 @@ export const allGames: Game[] = [
   {
     id: "13",
     genre: "Indie",
-    image: "/game-images/hollowknight.jpeg",
+    image: "/assets/game-images/hollowknight.jpeg",
     name: "Hollow Knight",
     description:
       "An action-adventure game set in a beautifully hand-drawn mysterious world.",
@@ -141,7 +141,7 @@ export const allGames: Game[] = [
   {
     id: "14",
     genre: "Action",
-    image: "/game-images/sekiro.jpeg",
+    image: "/assets/game-images/sekiro.jpeg",
     name: "Sekiro: Shadows Die Twice",
     description:
       "A game where you seek revenge on your foes in late 1500s Sengoku Japan.",
@@ -151,7 +151,7 @@ export const allGames: Game[] = [
   {
     id: "15",
     genre: "Adventure",
-    image: "/game-images/firewatch.jpeg",
+    image: "/assets/game-images/firewatch.jpeg",
     name: "Firewatch",
     description:
       "A single-player first-person mystery set in the Wyoming wilderness.",
@@ -161,7 +161,7 @@ export const allGames: Game[] = [
   {
     id: "16",
     genre: "Action-Adventure",
-    image: "/game-images/assassinscreedvalhalla.jpeg",
+    image: "/assets/game-images/assassinscreedvalhalla.jpeg",
     name: "Assassin's Creed Valhalla",
     description:
       "Live as a legendary Viking warrior raised on tales of battle and glory.",
@@ -171,7 +171,7 @@ export const allGames: Game[] = [
   {
     id: "17",
     genre: "RPG",
-    image: "/game-images/finalfantasyxv.jpeg",
+    image: "/assets/game-images/finalfantasyxv.jpeg",
     name: "Final Fantasy XV",
     description:
       "Embark on an epic journey with your friends to reclaim your homeland.",
@@ -181,7 +181,7 @@ export const allGames: Game[] = [
   {
     id: "18",
     genre: "Shooter",
-    image: "/game-images/callofdutywarzone.jpeg",
+    image: "/assets/game-images/callofdutywarzone.jpeg",
     name: "Call of Duty: Warzone",
     description:
       "A free-to-play battle royale game where you fight to be the last one standing.",
@@ -191,7 +191,7 @@ export const allGames: Game[] = [
   {
     id: "19",
     genre: "Strategy",
-    image: "/game-images/ageofempiresII.jpeg",
+    image: "/assets/game-images/ageofempiresII.jpeg",
     name: "Age of Empires II: Definitive Edition",
     description:
       "A classic strategy game remastered in full HD with new features.",
@@ -201,7 +201,7 @@ export const allGames: Game[] = [
   {
     id: "20",
     genre: "MOBA",
-    image: "/game-images/leagueoflegends.jpeg",
+    image: "/assets/game-images/leagueoflegends.jpeg",
     name: "League of Legends",
     description:
       "A fast-paced, competitive online game that blends the speed and intensity of an RTS with RPG elements.",
@@ -211,7 +211,7 @@ export const allGames: Game[] = [
   {
     id: "21",
     genre: "Indie",
-    image: "/game-images/celeste.jpeg",
+    image: "/assets/game-images/celeste.jpeg",
     name: "Celeste",
     description:
       "Help Madeline survive her inner demons on her journey to the top of Celeste Mountain.",
@@ -221,7 +221,7 @@ export const allGames: Game[] = [
   {
     id: "22",
     genre: "Puzzle",
-    image: "/game-images/tetris99.jpeg",
+    image: "/assets/game-images/tetris99.jpeg",
     name: "Tetris 99",
     description:
       "The iconic puzzle game Tetris with a 99-player battle royale twist.",
@@ -231,7 +231,7 @@ export const allGames: Game[] = [
   {
     id: "23",
     genre: "Battle Royale",
-    image: "/game-images/freefire.jpeg",
+    image: "/assets/game-images/freefire.jpeg",
     name: "Free Fire",
     description:
       "A fast-paced battle royale game where players fight to be the last one standing.",
@@ -241,7 +241,7 @@ export const allGames: Game[] = [
   {
     id: "24",
     genre: "Action",
-    image: "/game-images/godofwar.jpeg",
+    image: "/assets/game-images/godofwar.jpeg",
     name: "God of War",
     description:
       "Kratos steps into the world of Norse gods in this critically acclaimed action game.",
@@ -251,7 +251,7 @@ export const allGames: Game[] = [
   {
     id: "25",
     genre: "Adventure",
-    image: "/game-images/reddeadredemption2.jpeg",
+    image: "/assets/game-images/reddeadredemption2.jpeg",
     name: "Red Dead Redemption 2",
     description:
       "An epic tale of life in America at the dawn of the modern age.",
@@ -261,7 +261,7 @@ export const allGames: Game[] = [
   {
     id: "26",
     genre: "Horror",
-    image: "/game-images/thelastofuspart2.jpeg",
+    image: "/assets/game-images/thelastofuspart2.jpeg",
     name: "The Last of Us Part II",
     description: "A complex, emotional story in a brutal post-pandemic world.",
     price: 59.99,
@@ -270,7 +270,7 @@ export const allGames: Game[] = [
   {
     id: "27",
     genre: "Racing",
-    image: "/game-images/mariokar8.jpeg",
+    image: "/assets/game-images/mariokar8.jpeg",
     name: "Mario Kart 8 Deluxe",
     description:
       "The ultimate version of Mario Kart 8 with more racers, tracks, and features.",
@@ -280,7 +280,7 @@ export const allGames: Game[] = [
   {
     id: "28",
     genre: "Sports",
-    image: "/game-images/nba2k21.jpeg",
+    image: "/assets/game-images/nba2k21.jpeg",
     name: "NBA 2K21",
     description: "Experience the next generation of basketball simulation.",
     price: 59.99,
@@ -289,7 +289,7 @@ export const allGames: Game[] = [
   {
     id: "29",
     genre: "MMORPG",
-    image: "/game-images/guildwars2.jpeg",
+    image: "/assets/game-images/guildwars2.jpeg",
     name: "Guild Wars 2",
     description:
       "A living, breathing online world where adventure awaits around every corner.",
@@ -299,7 +299,7 @@ export const allGames: Game[] = [
   {
     id: "30",
     genre: "Indie",
-    image: "/game-images/amongus.jpeg",
+    image: "/assets/game-images/amongus.jpeg",
     name: "Among Us",
     description:
       "An online multiplayer social deduction game set in a space-themed setting.",
