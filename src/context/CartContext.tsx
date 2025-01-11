@@ -1,31 +1,46 @@
 "use client";
 
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import { FC, createContext, useContext, useState, ReactNode, useEffect } from "react";
 import { Game } from "@/types";
 
 interface CartContextProps {
   cart: Game[];
   addToCart: (game: Game) => void;
-  removeGame: (gameId: string) => void;
+  removeCard: (gameId: string) => void;
 }
 
 const CartContext = createContext<CartContextProps | undefined>(undefined);
 
-export const CartProvider: React.FC<{ children: ReactNode }> = ({
+export const CartProvider: FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [cart, setCart] = useState<Game[]>([]);
+
+  useEffect(() => {
+    const storedCart = localStorage.getItem("cart");
+    if (storedCart) {
+      console.log("Cart loaded from localStorage", storedCart);
+      setCart(JSON.parse(storedCart));
+    }
+  }, []);
+
+  useEffect(() => {
+    if (cart.length > 0) {
+      console.log("Saving cart to localStorage", cart);
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+  }, [cart]);
 
   const addToCart = (game: Game) => {
     setCart((prevCart) => [...prevCart, game]);
   };
 
-  const removeGame = (gameId: string) => {
+  const removeCard = (gameId: string) => {
     setCart((prevCart) => prevCart.filter((game) => game.id !== gameId));
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeGame }}>
+    <CartContext.Provider value={{ cart, addToCart, removeCard }}>
       {children}
     </CartContext.Provider>
   );
