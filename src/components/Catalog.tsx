@@ -15,13 +15,19 @@ const Catalog = ({ genre }: CatalogProps) => {
 
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
-  const fetchGames = async (genre: string, page: number = currentPage) => {
+  const fetchGames = async (genre: string, page: number = 1) => {
     try {
       setLoading(true);
       const url = `${apiUrl}/games?genre=${genre}&page=${page}`;
       const response = await fetch(url);
       const data = await response.json();
-      setGames(data.games || []);
+      
+      if (page === 1) {
+        setGames(data.games || []);
+      } else {
+        setGames((prevGames) => [...prevGames, ...data.games]);
+      }
+
     } catch (error) {
       console.error("Error trying to fetch the games", error);
     } finally {
@@ -30,21 +36,16 @@ const Catalog = ({ genre }: CatalogProps) => {
   };
 
   useEffect(() => {
-    if (genre) {
-      fetchGames(genre);
-    }
+    setGames([]);
+    setCurrentPage(1);
+    fetchGames(genre, 1);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [genre]);
 
   const handleSeeMore = async () => {
     try {
       const nextPage = currentPage + 1;
-      setLoading(true);
-      const url = `/api/games?genre=${genre}&page=${nextPage}`
-      const response = await fetch(url);
-      const data = await response.json();
-  
-      setGames((prevGames) => [...prevGames, ...data.games]);
+      await fetchGames(genre, nextPage);
       setCurrentPage(nextPage);
     } catch (error) {
       console.error("Error fetching more games:", error);
