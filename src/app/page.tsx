@@ -1,9 +1,11 @@
 "use client";
 
-import Catalog from "@/components/Catalog";
 import { availableFilters } from "@/utils/endpoint";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState, Suspense } from "react";
+import dynamic from "next/dynamic";
+
+const Catalog = dynamic(() => import("@/components/Catalog"), { ssr: false });
 
 const Page = () => {
   const searchParams = useSearchParams();
