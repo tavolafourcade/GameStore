@@ -4,8 +4,7 @@ import { availableFilters } from "@/utils/endpoint";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState, Suspense } from "react";
 import dynamic from "next/dynamic";
-
-const Catalog = dynamic(() => import("@/components/Catalog"), { ssr: false });
+import Catalog from "@/components/Catalog";
 
 const Page = () => {
   const searchParams = useSearchParams();
@@ -29,7 +28,6 @@ const Page = () => {
   }
 
   return (
-    <Suspense fallback={<div>Loading catalog...</div>}>
       <section className="flex flex-col">
         <div className="px-6 py-8 gap-8 sm:py-12 sm:px-6 lg:px-32 flex flex-col sm:gap-12 w-full">
           <p className="text-grey-medium text-4xl font-bold">Top Sellers</p>
@@ -55,8 +53,6 @@ const Page = () => {
           <Catalog genre={selectGenre} />
         </div>
       </section>
-    </Suspense>
-
   );
 };
 
