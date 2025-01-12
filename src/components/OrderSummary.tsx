@@ -34,6 +34,7 @@ const OrderSummary = () => {
         </div>
       </div>
       <button
+        data-testid="checkout-button"
         className={`mt-8 py-5 w-full rounded-lg text-white transition-colors ${
           totalPrice === 0
             ? "bg-disabled cursor-not-allowed"

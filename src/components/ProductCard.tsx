@@ -26,10 +26,11 @@ const ProductCard: FC<ProductCardProps> = ({ games }) => {
     >
       <div className="w-full h-[240px] relative">
         <Image
+          data-testid={game.id}
           src={game.image}
           alt={game.name}
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
           className="rounded-t-2xl"
         />
       </div>

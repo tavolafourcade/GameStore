@@ -9,7 +9,7 @@ interface CartContextProps {
   removeCard: (gameId: string) => void;
 }
 
-const CartContext = createContext<CartContextProps | undefined>(undefined);
+export const CartContext = createContext<CartContextProps | undefined>(undefined);
 
 export const CartProvider: FC<{ children: ReactNode }> = ({
   children,

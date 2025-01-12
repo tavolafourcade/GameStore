@@ -17,7 +17,7 @@ const Catalog = ({ genre }: CatalogProps) => {
   const fetchGames = async (genre: string, page: number = currentPage) => {
     try {
       setLoading(true);
-      const response = await fetch(`/api/games?genre=${genre}&page${page}`);
+      const response = await fetch(`/api/games?genre=${genre}&page=${page}`);
       const data = await response.json();
       setGames(data.games || []);
     } catch (error) {

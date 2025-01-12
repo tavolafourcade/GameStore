@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="bg-grey-neutral flex py-16  justify-center">
+    <div className="bg-grey-neutral flex py-16  justify-center" data-testid="footer-container">
       <Link href="/">
         <Image
           src={"/assets/images/logo.png"}

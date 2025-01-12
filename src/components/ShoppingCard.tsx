@@ -17,16 +17,17 @@ const ShoppingCard = () => {
           <Image
             src={game.image}
             alt={game.name}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
           />
         </div>
         <div className="hidden lg:block flex-shrink-0 relative lg:w-64">
           <Image
+            data-testid={game.id}
             src={game.image}
             alt={game.name}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
             className="h-full"
           />
         </div>
@@ -47,6 +48,7 @@ const ShoppingCard = () => {
         </div>
       </div>
       <Image
+        data-testid="removeCard"
         src={"assets/icons/close.svg"}
         alt="close"
         width={24}
