@@ -7,8 +7,6 @@ import React from "react";
 const ShoppingCard = () => {
   const { cart, removeCard } = useCart();
 
-  console.log(cart);
-
   return cart.map((game) => (
     <div
       key={game.id}
@@ -46,14 +44,8 @@ const ShoppingCard = () => {
               <p className="font-bold text-lg lg:text-xl">${game.price}</p>
             </div>
           </div>
-          {/* <div className="flex sm:hidden items-end justify-end">
-              <p className="font-bold text-xl">${game.price}</p>
-            </div> */}
         </div>
       </div>
-      {/* <div className="flex justify-end right-0 bottom-0">
-        <p className="font-bold text-xl">${game.price}</p>
-      </div> */}
       <Image
         src={"assets/icons/close.svg"}
         alt="close"

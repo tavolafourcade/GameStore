@@ -12,14 +12,11 @@ const Page = () => {
 
   useEffect(() => {
     const genre = searchParams.get("genre") || "all";
-    console.log('genre en useeffect en Page.tsx---->',genre);
     setSelectGenre(genre);
-    console.log('searchParams--->', searchParams)
   }, [searchParams]);
 
   const handleCategory = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const genre = event.target.value;
-    console.log('handleCategory genre--->',genre);
     setSelectGenre(genre);
 
     router.push(`?genre=${genre}`);
@@ -28,7 +25,6 @@ const Page = () => {
   if (!selectGenre) {
     return <div>Loading...</div>;
   }
-  console.log(selectGenre);
 
   return (
     <section className="flex flex-col">

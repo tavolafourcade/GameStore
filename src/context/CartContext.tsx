@@ -19,14 +19,12 @@ export const CartProvider: FC<{ children: ReactNode }> = ({
   useEffect(() => {
     const storedCart = localStorage.getItem("cart");
     if (storedCart) {
-      console.log("Cart loaded from localStorage", storedCart);
       setCart(JSON.parse(storedCart));
     }
   }, []);
 
   useEffect(() => {
     if (cart.length > 0) {
-      console.log("Saving cart to localStorage", cart);
       localStorage.setItem("cart", JSON.stringify(cart));
     }
   }, [cart]);

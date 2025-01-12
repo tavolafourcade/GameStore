@@ -13,24 +13,21 @@ const Catalog = ({ genre }: CatalogProps) => {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
 
-  console.log(games);
 
   const fetchGames = async (genre: string, page: number = currentPage) => {
     try {
       setLoading(true);
       const response = await fetch(`/api/games?genre=${genre}&page${page}`);
       const data = await response.json();
-      console.log('data.games---->', data.games);
       setGames(data.games || []);
     } catch (error) {
-      console.log("Error trying to fetch the games", error);
+      console.error("Error trying to fetch the games", error);
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    console.log('genre in useEffect Catalog-->', genre);
     if (genre) {
       fetchGames(genre);
     }
