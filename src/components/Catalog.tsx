@@ -13,11 +13,13 @@ const Catalog = ({ genre }: CatalogProps) => {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
 
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
   const fetchGames = async (genre: string, page: number = currentPage) => {
     try {
       setLoading(true);
-      const response = await fetch(`/api/games?genre=${genre}&page=${page}`);
+      const url = `${apiUrl}/games?genre=${genre}&page=${page}`;
+      const response = await fetch(url);
       const data = await response.json();
       setGames(data.games || []);
     } catch (error) {
@@ -38,7 +40,8 @@ const Catalog = ({ genre }: CatalogProps) => {
     try {
       const nextPage = currentPage + 1;
       setLoading(true);
-      const response = await fetch(`/api/games?genre=${genre}&page=${nextPage}`);
+      const url = `/api/games?genre=${genre}&page=${nextPage}`
+      const response = await fetch(url);
       const data = await response.json();
   
       setGames((prevGames) => [...prevGames, ...data.games]);
