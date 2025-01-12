@@ -5,4 +5,5 @@ export interface Game {
   isNew: boolean;
   name: string;
   price: number;
+  description?: string;
 }
