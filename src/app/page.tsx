@@ -2,17 +2,32 @@
 
 import Catalog from "@/components/Catalog";
 import { availableFilters } from "@/utils/endpoint";
-import { useState } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const Page = () => {
-  const [selectGenre, setSelectGenre] = useState("all");
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const [selectGenre, setSelectGenre] = useState<string | null>(null);
+
+  useEffect(() => {
+    const genre = searchParams.get("genre") || "all";
+    console.log('genre en useeffect en Page.tsx---->',genre);
+    setSelectGenre(genre);
+    console.log('searchParams--->', searchParams)
+  }, [searchParams]);
 
   const handleCategory = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const genre = event.target.value;
-    console.log({genre});
+    console.log('handleCategory genre--->',genre);
     setSelectGenre(genre);
+
+    router.push(`?genre=${genre}`);
   };
 
+  if (!selectGenre) {
+    return <div>Loading...</div>;
+  }
   console.log(selectGenre);
 
   return (

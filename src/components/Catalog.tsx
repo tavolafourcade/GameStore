@@ -15,12 +15,12 @@ const Catalog = ({ genre }: CatalogProps) => {
 
   console.log(games);
 
-  const fetchGames = async (genre = "all", page = currentPage) => {
+  const fetchGames = async (genre: string, page: number = currentPage) => {
     try {
       setLoading(true);
       const response = await fetch(`/api/games?genre=${genre}&page${page}`);
       const data = await response.json();
-      console.log(data.games);
+      console.log('data.games---->', data.games);
       setGames(data.games || []);
     } catch (error) {
       console.log("Error trying to fetch the games", error);
@@ -30,8 +30,10 @@ const Catalog = ({ genre }: CatalogProps) => {
   };
 
   useEffect(() => {
-    console.log(genre);
-    fetchGames(genre);
+    console.log('genre in useEffect Catalog-->', genre);
+    if (genre) {
+      fetchGames(genre);
+    }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [genre]);
 
