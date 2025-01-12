@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import Image from "next/image";
 
 import { useCart } from "@/context/CartContext";
@@ -8,11 +8,15 @@ interface ProductCardProps {
   games: Game[];
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ games }) => {
-  const { addToCart } = useCart();
+const ProductCard: FC<ProductCardProps> = ({ games }) => {
+  const { cart, addToCart, removeCard } = useCart();
 
-  const handleAddToCart = (game: Game) => {
-    addToCart(game);
+  const handleCartAction = (game: Game) => {
+    if (cart.some((cartGame) => cartGame.id === game.id)) {
+      removeCard(game.id);
+    } else {
+      addToCart(game);
+    }
   };
 
   return games.map((game) => (
@@ -39,10 +43,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ games }) => {
         </div>
       </div>
       <button
-        className="py-5 border border-grey-medium m-auto w-full rounded-lg"
-        onClick={() => handleAddToCart(game)}
+        className={`py-5 border m-auto w-full rounded-lg ${
+          cart.some((cartGame) => cartGame.id === game.id)
+            ? "bg-red-500 text-white hover:bg-red-600 focus:ring-2 focus:ring-red-500"
+            : "bg-grey-background text-grey-medium hover:bg-grey-neutral hover:text-white focus:ring-2 focus:ring-grey-neutral"
+        }`}
+        onClick={() => handleCartAction(game)}
       >
-        Add to cart
+        {cart.some((cartGame) => cartGame.id === game.id) ? "Remove" : "Add to cart"}
       </button>
     </div>
   ));
